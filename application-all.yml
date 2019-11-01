@@ -38,7 +38,7 @@ eureka:
       defaultZone: http://eureka-server1:8761/eureka/,http://eureka-server2:8762/eureka/
 spring:
   profiles: eureka-server3
-  ---
+---
 server:
   port: 18081
 spring:
