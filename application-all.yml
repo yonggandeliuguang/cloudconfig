@@ -38,3 +38,60 @@ eureka:
       defaultZone: http://eureka-server1:8761/eureka/,http://eureka-server2:8762/eureka/
 spring:
   profiles: eureka-server3
+  ---
+server:
+  port: 18081
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/demo1?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: eureka-provider
+  profiles: eureka-provider-18081
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server1:8761/eureka/,http://eureka-server2:8761/eureka/,http://eureka-server3:8763/eureka/
+  instance:
+    instance-id: eureka-provider-18081
+    ip-address: true
+---
+server:
+  port: 28081
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/demo2?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: eureka-provider
+  profiles: eureka-provider-28081
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server1:8761/eureka/,http://eureka-server2:8761/eureka/,http://eureka-server3:8763/eureka/
+  instance:
+    instance-id: eureka-provider-28081
+    ip-address: true
+---
+server:
+  port: 38081
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/demo3?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: eureka-provider
+  profiles: eureka-provider-38081
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server1:8761/eureka/,http://eureka-server2:8761/eureka/,http://eureka-server3:8763/eureka/
+  instance:
+    instance-id: eureka-provider-38081
+    ip-address: true
