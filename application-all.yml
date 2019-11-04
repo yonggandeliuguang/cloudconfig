@@ -42,7 +42,7 @@ server:
   port: 18081
 spring:
   datasource:
-    url: jdbc:mysql:///demo1?characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql:///demo1?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -61,7 +61,7 @@ server:
   port: 28081
 spring:
   datasource:
-    url: jdbc:mysql:///demo2?characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql:///demo2?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -80,7 +80,7 @@ server:
   port: 38081
 spring:
   datasource:
-    url: jdbc:mysql:///demo3?characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql:///demo3?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
